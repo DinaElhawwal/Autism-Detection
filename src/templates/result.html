@@ -1,0 +1,37 @@
+{% include 'partials/header.html' %}
+{% include 'partials/nav.html' %}
+
+<div class="wrapper-result ref">
+    {% include 'partials/error.html' %}
+    <h1 class="result-heading">Autism Detector</h1>
+    <p class="result-note">PS - Use cropped face images for higher accuracy</p>
+    <form class="result-form" action="#" method="post" enctype="multipart/form-data" id="form">
+        <label for="image" class="image_input--label">Upload</label>
+        <input id="image" type="file" name="image" class="image_input" accept="Image/*" capture="environment">
+    </form>
+    <img src="#" alt="User Input" class="user-input-image">
+    <button class="btn result-btn">Detect</button>
+    <div class="result">
+        <p class="result-col">Result</p>
+        <div class="result-separation"></div>
+        <p class="result-col">{{result}}</p>
+    </div>
+
+</div>
+
+
+
+<script src="static/js/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+{% include 'partials/footer.html' %}

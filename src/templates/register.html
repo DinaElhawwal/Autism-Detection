@@ -1,0 +1,49 @@
+{% include 'partials/header.html' %}
+{% include 'partials/nav.html' %}
+
+<div class="wrapper wrapper-signup">
+    {% include 'partials/error.html' %}
+    <div class="form-box">
+        <i class="fa-solid fa-puzzle-piece form__icon"></i>
+        <h3 class="form__text form__text-signup">Start Your journey with us.</h3>
+        <p class="form__text-p form__text-p-signup">Discover the best detection AI model out there!</p>
+        <div class="signup__logo">
+            <p><span>Gad</span>Grad</p>
+        </div>
+    </div>
+    <form class="form-signup" action="{{ url_for('register') }}" method="post">
+        <h3 class="form__text-signup">Create an account</h3>
+
+        <div class="name">
+            <input id="fname" name="fname" type="text" class="form__input form__input-signup" placeholder="First name" tabindex="1" required>
+
+            <input id="lname" name="lname" type="text" class="form__input form__input-signup" placeholder="Last name" tabindex="2" required>
+        </div>
+
+
+        <input id="email" name="email" type="email" class="form__input form__input-signup" placeholder="Enter your email" tabindex="3" required>
+
+        <div class="gender">
+            <div class="form__input-gender" tabindex="4">
+                <i class="fa-solid fa-person-dress"></i>
+                Male
+            </div>
+            <div class="form__input-gender" tabindex="5">
+                <i class="fa-solid fa-person-dress"></i>
+                Female
+            </div>
+
+        </div>
+        <input id="gender" type="hidden" class="gender__input" name="gender">
+
+        <input id="password" name="password" type="password" class="form__input form__input-signup" placeholder="Create a password" required tabindex="6">
+<!--        <input id="c-password" name="c-password" type="password" class="form__input form__input-signup" placeholder="Confirm password" required>-->
+        <button class="btn form-btn" tabindex="7">Create account</button>
+    </form>
+</div>
+
+
+<script src="static/js/form.js"></script>
+
+
+{% include 'partials/footer.html' %}

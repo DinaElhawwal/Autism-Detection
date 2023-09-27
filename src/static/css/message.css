@@ -1,0 +1,33 @@
+.flashes {
+
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    z-index: 950;
+    transform: translateX(-50%);
+    list-style: none;
+
+}
+
+.flashes li {
+
+    color: #fff;
+    padding: 1rem 2rem;
+    background: var(--back-color);
+    border-radius: var(--border-radius);
+}
+
+.error-icon {
+    margin-right: 1.5rem;
+}
+
+.flashes li span {
+    font-weight: 700;
+    font-size: larger;
+    color: var(--color-text-fancy);
+}
+
+.ref {
+    position: relative;
+}
+
